@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hola Mundo
-        run: echo "Hola segundo Mundo" 
+        run: echo "Hola segundo Mundo ${{ github.ref}} " 
