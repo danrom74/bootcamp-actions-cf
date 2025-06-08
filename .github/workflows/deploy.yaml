@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hola Mundo
-        run: echo "Hola primer Mundo"
+        run: hecho "Hola primer Mundo"
 
   segundo_job:
     needs: primer_job
