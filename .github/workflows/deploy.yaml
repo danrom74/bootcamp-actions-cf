@@ -12,7 +12,7 @@ jobs:
         run: echo "Hola primer Mundo"
 
   segundo_job:
-    if: false # Esta condición evita que el trabajo se ejecute  
+    if: ${{ github.ref == 'refs/heads/main' }}  
     needs: primer_job
     runs-on: ubuntu-latest
     steps:
