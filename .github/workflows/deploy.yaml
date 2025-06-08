@@ -9,9 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hola Mundo
-        run: hecho "Hola primer Mundo"
+        run: echo "Hola primer Mundo"
 
   segundo_job:
+    if: false # Esta condición evita que el trabajo se ejecute  
     needs: primer_job
     runs-on: ubuntu-latest
     steps:
