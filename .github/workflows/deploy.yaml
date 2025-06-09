@@ -29,3 +29,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: archivo-test
+
+      - name: Visualizamos contenido del archivo descargado
+        run: |
+          cat text.log       
+       
