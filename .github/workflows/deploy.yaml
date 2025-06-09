@@ -13,8 +13,9 @@ jobs:
       MY_VAR: "Danilo Romero"
 
     steps:
-      - name: Hola Mundo
-        run: echo "Hola primer Mundo $MY_VAR"
+      - name: Directorio de trabajo
+        run: ls -al     
+        #run: echo "Hola primer Mundo $MY_VAR"
 
   segundo_job:
     if: ${{ github.ref == 'refs/heads/main' }} 
