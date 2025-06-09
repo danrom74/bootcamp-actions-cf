@@ -18,4 +18,4 @@ jobs:
     steps:
       - name: Imprimir Mensajes
         run: |
-          echo "{{ matrix.messages }}"
+          echo "${{ matrix.messages }}"
