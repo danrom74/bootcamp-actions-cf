@@ -1,0 +1,21 @@
+name: Deploy to Server
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  primer_job:
+    name: Primer Job
+    runs-on: ubuntu-latest
+
+    strategy:
+      #fail-fast: false
+      matrix:
+        messages: [Hola, Marcos Danilo, Romero Martinez, El Lobo]
+        #os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Imprimir Mensajes
+        run: |
+          echo "{{ matrix.messages }}"
