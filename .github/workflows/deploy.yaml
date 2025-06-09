@@ -14,14 +14,20 @@ jobs:
 
     steps:
       - name: Directorio de trabajo
-        run: ls -al     
+        id: step_1
+        run: echo "mi_variable=HOLA MUNDO" >> $GITHUB_OUTPUT
+        #run: ls -al     
         #run: echo "Hola primer Mundo $MY_VAR"
+      
+      - name: Obtener Valor de mi_variable
+        run: echo "El valor de mi_variable es ${{ steps.step_1.outputs.mi_variable }}"
+      
+      
+      #- name: Accion llamada
+      #  uses: actions/checkout@v4 
 
-      - name: Accion 
-        uses: actions/checkout@v4 
-
-      - name: Directorio de trabajo despues de la accion
-        run: ls -al   
+      #- name: Directorio de trabajo despues de la accion
+      #  run: ls -al   
 
   segundo_job:
     if: ${{ github.ref == 'refs/heads/main' }} 
