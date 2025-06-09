@@ -6,6 +6,7 @@ on:
 
 jobs:
   primer_job:
+    name: Primer Job
     runs-on: ubuntu-latest
     
     env:
@@ -16,7 +17,8 @@ jobs:
         run: echo "Hola primer Mundo $MY_VAR"
 
   segundo_job:
-    if: ${{ github.ref == 'refs/heads/main' }}  
+    if: ${{ github.ref == 'refs/heads/main' }} 
+    name: Segundo Job 
     needs: primer_job
     runs-on: ubuntu-latest
     steps:
