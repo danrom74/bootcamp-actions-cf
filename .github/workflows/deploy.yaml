@@ -21,9 +21,9 @@ jobs:
           path: text.log       
  
   Segundo_job:
-    need: primer_job
     name: Segundo Job
     runs-on: ubuntu-latest
+    need: primer_job
 
     steps:
       - name: Descargamos el artefacto generado
