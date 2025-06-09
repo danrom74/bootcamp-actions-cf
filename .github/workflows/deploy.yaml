@@ -17,6 +17,12 @@ jobs:
         run: ls -al     
         #run: echo "Hola primer Mundo $MY_VAR"
 
+      - name: Accion 
+        uses: actions/checkout@v4 
+
+      - name: Directorio de trabajo despues de la accion
+        run: ls -al   
+
   segundo_job:
     if: ${{ github.ref == 'refs/heads/main' }} 
     name: Segundo Job 
