@@ -20,3 +20,12 @@ jobs:
           name: archivo-test
           path: text.log       
  
+  Segundo_job:
+    name: Segundo Job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargamos el artefacto generado
+        uses: actions/download-artifact@v4
+        with:
+          name: archivo-test
