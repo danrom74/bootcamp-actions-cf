@@ -23,7 +23,7 @@ jobs:
   Segundo_job:
     name: Segundo Job
     runs-on: ubuntu-latest
-    need: primer_job
+    needs: primer_job
 
     steps:
       - name: Descargamos el artefacto generado
