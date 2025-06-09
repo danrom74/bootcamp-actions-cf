@@ -21,6 +21,7 @@ jobs:
           path: text.log       
  
   Segundo_job:
+    need: primer_job
     name: Segundo Job
     runs-on: ubuntu-latest
 
